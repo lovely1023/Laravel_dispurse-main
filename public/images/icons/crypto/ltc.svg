@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>LTC</title>
+    <g id="03_ui_kit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_icons" transform="translate(-307.000000, -480.000000)">
+            <g id="litecoin" transform="translate(307.000000, 480.000000)">
+                <rect id="frame" x="0" y="0" width="32" height="32"></rect>
+                <path d="M16,0 C24.836556,-1.623249e-15 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 C7.163444,32 1.082166e-15,24.836556 0,16 C-1.082166e-15,7.163444 7.163444,1.623249e-15 16,0 Z" id="shape" fill="#88CBF5" fill-rule="nonzero"></path>
+                <polyline id="shape" fill="#FFFFFF" fill-rule="nonzero" points="15.0645315 20.2745209 16.1033623 16.3628514 18.5628255 15.464306 19.1745824 13.1654327 19.1536951 13.1084053 16.7327035 13.9928639 18.4770415 7.42470994 13.5300387 7.42470994 11.2488468 15.9963024 9.34421038 16.6920946 8.71486916 19.0620821 10.6180483 18.3668728 9.27358194 23.4185068 22.4395208 23.4185068 23.2835647 20.2745209 15.0645315 20.2745209"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

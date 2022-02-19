@@ -1,0 +1,233 @@
+@import "variables.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-opacity-80 text-regular-hard font-bold desktop:font-extrabold text-3xl desktop:text-7xl mb-7 desktop:mb-16
+    }
+
+    h2 {
+        @apply text-opacity-80 text-regular-hard font-bold md:font-extrabold text-3xl desktop:text-5xl desktop:text-4xl
+    }
+
+    h3 {
+        @apply text-opacity-80 text-regular-hard font-bold text-3xl desktop:text-4xl mb-7 desktop:mb-10
+    }
+
+    h4 {
+        @apply text-regular-hard text-opacity-60 text-base
+    }
+
+    h5 {
+        @apply text-regular-hard text-opacity-80 font-semibold text-base
+    }
+
+    p {
+        @apply text-regular-hard text-opacity-60 text-base leading-relaxed
+    }
+
+    input[type=checkbox] {
+        @apply bg-regular-hard bg-opacity-6 w-6 h-6 rounded-md border-0
+    }
+
+    input[type=checkbox]:focus {
+        @apply outline-none shadow-none
+    }
+
+    input[type=checkbox] + label {
+        @apply pl-4
+    }
+
+    input[type=checkbox]:checked {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e"), theme('backgroundImage.primary');
+        @apply shadow-primary
+    }
+
+    input[type=checkbox]:hover {
+        @apply bg-opacity-3
+    }
+}
+
+@layer components {
+    .btn {
+        @apply whitespace-nowrap rounded-xl py-3 px-7 font-semibold text-center w-full md:w-auto
+    }
+
+    .btn-xl {
+        @apply md:py-5 desktop:py-6 md:px-5 desktop:px-10 desktop:text-sl
+    }
+
+    .btn-primary {
+        @apply bg-primary shadow-primary hover:shadow-primary-hover active:shadow-primary-active disabled:shadow-primary-disabled disabled:text-opacity-25 text-white;
+    }
+
+    .btn-plain {
+        @apply bg-white shadow-plain hover:shadow-plain-hover active:shadow-plain-active disabled:shadow-plain-disabled disabled:text-opacity-25 text-primary;
+    }
+
+    .submenu-item {
+        @apply block px-4 py-4
+    }
+
+    .submenu-item:hover {
+        @apply font-semibold bg-regular text-regular text-opacity-100 bg-opacity-2
+    }
+
+    .mobile-menu-item {
+        @apply block text-sm px-2 py-4
+    }
+
+    .mobile-menu-item:hover {
+        @apply font-semibold bg-regular bg-opacity-2
+    }
+
+    .form-group {
+        @apply flex flex-col gap-y-1
+    }
+
+    .input {
+        @apply block bg-regular-hard bg-opacity-2 hover:bg-opacity-3 rounded-xl h-12 px-4 w-full placeholder-regular placeholder-opacity-60 disabled:placeholder-opacity-25 text-base
+        focus:outline-none focus:ring-2 focus:ring-regular focus:ring-opacity-6 border-0
+    }
+
+    .input:disabled {
+        @apply text-regular text-opacity-60
+    }
+
+    .label {
+        @apply block text-opacity-60 text-regular-hard text-smx ml-3
+    }
+
+    .banner-shadow svg {
+        filter: drop-shadow(0 0 1px rgba(69,121,245,0.24)) drop-shadow(0 2px 4px rgba(27,10,82,0.12)) drop-shadow(0 16px 24px rgba(69,121,245,0.24)) drop-shadow(0 8px 8px rgba(69,121,245,0.12));
+    }
+
+    .panel {
+        @apply bg-white rounded-lg p-6 w-64 shadow-dark
+    }
+
+    .panel-title {
+        @apply inline text-opacity-80 text-regular-hard font-bold text-lg md:text-xl desktop:text-4xl tracking-tight align-middle -mt-7
+    }
+
+    .panel-description {
+        @apply leading-relaxed mt-5
+    }
+
+    .form {
+        @apply flex flex-col items-stretch mt-5 max-w-md gap-y-2
+    }
+
+    .informer {
+        perspective: 1000px;
+        @apply cursor-pointer
+    }
+
+    .informer-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .informer:hover .informer-inner, .informer:active .informer-inner {
+        transform: rotateY(180deg);
+    }
+
+    .informer-front, .informer-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        @apply bg-white
+    }
+
+    /* Style the back side */
+    .informer-back {
+        transform: rotateY(180deg);
+        color:black;
+    }
+
+    .informer-table th {
+        @apply text-left
+    }
+
+    .informer-table tr {
+        @apply even:bg-regular-hard even:bg-opacity-3
+    }
+
+    .exchanges-bubble {
+        @apply absolute bg-white rounded-full flex place-items-center align-middle shadow-dark transform transition duration-300 cursor-pointer
+    }
+
+    .exchanges-bubble.inactive {
+        @apply group hover:bg-black hover:bg-opacity-40
+    }
+
+    .exchanges-bubble.coinbase {
+        width:50px;
+        height:50px;
+        left:-71px;
+        top:15px;
+    }
+
+    .exchanges-bubble.gemini {
+        width:38px;
+        height:38px;
+        left:-84px;
+        top:85px;
+    }
+
+    .exchanges-bubble.robinhood {
+        width: 48px;height: 48px;left: -84px;top: 139px;
+    }
+
+    .exchanges-bubble.binance {
+        width: 40px;height: 40px;left: 139px;top: 8px;
+    }
+
+    .exchanges-bubble.ftx {
+        width: 33px;height: 33px;left: 179px;top: 70px;
+    }
+
+    .exchanges-bubble.etoro {
+        width: 35px;height: 35px;left: 159px;top: 152px;
+    }
+
+    @screen md {
+        .exchanges-bubble.coinbase {
+            width:144px;
+            height:144px;
+            left:-235px;
+            top:87px;
+        }
+
+        .exchanges-bubble.gemini {
+            width:72px;
+            height:72px;
+            left:-138px;
+            top:289px;
+        }
+
+        .exchanges-bubble.robinhood {
+            width: 112px;height: 112px;left: -203px;top: 426px;
+        }
+
+        .exchanges-bubble.binance {
+            width: 72px;height: 72px;left: 480px;top: 84px;
+        }
+
+        .exchanges-bubble.ftx {
+            width: 128px;height: 128px;left: 557px;top: 162px;
+        }
+
+        .exchanges-bubble.etoro {
+            width: 130px;height: 130px;left: 529px;top: 386px;
+        }
+    }
+}

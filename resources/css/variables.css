@@ -1,0 +1,5 @@
+:root {
+    --color-green-spring: theme('colors.green.spring');
+    --color-blue-cornflower: theme('colors.blue.cornflower');
+    --color-violet-electric: theme('colors.violet.electric');
+}
